@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="À propos d'Alex Chen — Développeur Shopify basé à Paris. Parcours, compétences et valeurs.">
+  <title>À propos — Alex Chen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin-top: 3rem;
+    }
+    .value-card {
+      background: var(--surface);
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: background var(--transition);
+    }
+    .value-card:hover { background: var(--surface2); }
+    .value-card__num {
+      font-family: var(--ff-head);
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: var(--muted2);
+      letter-spacing: -0.06em;
+      line-height: 1;
+      transition: color var(--transition);
+    }
+    .value-card:hover .value-card__num { color: var(--em); }
+    .value-card__title {
+      font-family: var(--ff-head);
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .value-card__desc {
+      font-size: 0.82rem;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin-top: 3rem;
+    }
+    .tool-item {
+      background: var(--surface);
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      transition: background var(--transition);
+    }
+    .tool-item:hover { background: var(--em-dim); }
+    .tool-item__icon { font-size: 1.4rem; line-height: 1; }
+    .tool-item__name {
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--text);
+    }
+    @media (max-width: 768px) {
+      .values-grid { grid-template-columns: 1fr; }
+      .tools-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="Navigation principale">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">AC<span>.</span></a>
+      <ul class="navbar__links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="projects.html">Projets</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="contact.html" class="navbar__cta">Contact</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Menu mobile">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <header class="page-header container">
+      <div class="label reveal">À propos</div>
+      <h1 class="page-header__heading reveal">
+        Alex Chen —<br><em>le développeur.</em>
+      </h1>
+      <p class="page-header__sub reveal">
+        Développeur Shopify basé à Paris, 3 ans d'expérience en agence e-commerce. Passionné par la performance, l'accessibilité et le détail.
+      </p>
+    </header>
+
+    <!-- ABOUT GRID -->
+    <section class="section container" aria-label="Présentation">
+      <div class="about-grid">
+
+        <!-- Intro -->
+        <div class="about-cell reveal">
+          <div class="about-cell__label">Qui suis-je</div>
+          <h2 class="about-cell__title">Développeur front-end spécialisé Shopify</h2>
+          <p class="about-cell__body">
+            Après une formation en développement web, j'ai rejoint une première agence e-commerce où j'ai découvert
+            l'écosystème Shopify. Ce qui devait être une mission de 6 mois s'est transformé en passion.
+            Aujourd'hui, je maîtrise le langage Liquid, l'API Shopify et les bonnes pratiques front-end
+            pour livrer des boutiques qui performent.
+          </p>
+        </div>
+
+        <!-- Approach -->
+        <div class="about-cell reveal">
+          <div class="about-cell__label">Mon approche</div>
+          <h2 class="about-cell__title">Code orienté résultats</h2>
+          <p class="about-cell__body">
+            Je crois qu'un bon site e-commerce est invisible — le visiteur ne pense pas à l'interface,
+            il pense au produit. Mon rôle est de créer cette fluidité. Je travaille en étroite collaboration
+            avec les équipes design et marketing pour que chaque pixel serve la conversion.
+          </p>
+        </div>
+
+        <!-- Availability -->
+        <div class="about-cell reveal" style="background: var(--em-dim); border-color: var(--em);">
+          <div class="about-cell__label" style="color:var(--em)">Disponibilité</div>
+          <h2 class="about-cell__title" style="color:var(--em)">Disponible — CDI / Freelance</h2>
+          <p class="about-cell__body">
+            Je suis actuellement à la recherche d'un poste de développeur Shopify en agence e-commerce,
+            de préférence à Paris ou full remote. Ouvert aux missions freelance en parallèle.
+          </p>
+          <a href="contact.html" class="btn btn--primary" style="align-self:flex-start; margin-top:0.5rem;">
+            Me contacter →
+          </a>
+        </div>
+
+        <!-- Languages -->
+        <div class="about-cell reveal">
+          <div class="about-cell__label">Langues</div>
+          <h2 class="about-cell__title">Langues parlées</h2>
+          <ul class="detail-sidebar__list" style="margin-top:0.5rem;">
+            <li>Français — natif</li>
+            <li>Anglais — courant (C1)</li>
+            <li>Mandarin — intermédiaire (B1)</li>
+          </ul>
+        </div>
+
+        <!-- Experience (full width) -->
+        <div class="about-cell about-cell--wide reveal">
+          <div class="about-cell__label">Parcours professionnel</div>
+          <div class="timeline">
+
+            <div class="timeline-item">
+              <div class="timeline-item__date">2022 →<br>Aujourd'hui</div>
+              <div>
+                <div class="timeline-item__title">Développeur Shopify — Agence Orbit Digital</div>
+                <div class="timeline-item__company">Paris, France · CDI</div>
+                <p class="timeline-item__desc">
+                  Développement et maintenance de boutiques Shopify & Shopify Plus pour des clients dans le luxe,
+                  la mode et la beauté. Intégration de maquettes Figma, développement d'apps sur-mesure,
+                  optimisation des performances et formation de clients à l'utilisation de l'admin Shopify.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-item__date">2021 →<br>2022</div>
+              <div>
+                <div class="timeline-item__title">Développeur web junior — Studio Pixel</div>
+                <div class="timeline-item__company">Lyon, France · CDI</div>
+                <p class="timeline-item__desc">
+                  Intégration HTML/CSS/JS de sites e-commerce et vitrines. Premiers projets Shopify,
+                  découverte du langage Liquid et des thèmes Shopify. Collaboration avec les équipes UX.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-item__date">2020 →<br>2021</div>
+              <div>
+                <div class="timeline-item__title">Formation — Développement Web Full Stack</div>
+                <div class="timeline-item__company">OpenClassrooms · Diplôme RNCP Bac+2</div>
+                <p class="timeline-item__desc">
+                  Formation intensive en HTML, CSS, JavaScript, Node.js et bases de données. Projet de fin de
+                  formation : boutique Shopify complète avec thème custom et intégrations tierces.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="section container" aria-labelledby="values-title">
+      <div class="label reveal">Ce en quoi je crois</div>
+      <h2 id="values-title" style="font-size:clamp(2rem,3.5vw,3rem); margin-top:0.75rem; letter-spacing:-0.03em;" class="reveal">
+        Mes valeurs de travail.
+      </h2>
+
+      <div class="values-grid">
+        <div class="value-card reveal">
+          <div class="value-card__num">01</div>
+          <h3 class="value-card__title">Qualité du code</h3>
+          <p class="value-card__desc">Code lisible, commenté et maintenable. Je documente mes développements et soigne la structure des fichiers Liquid pour faciliter les évolutions futures.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-card__num">02</div>
+          <h3 class="value-card__title">Performance d'abord</h3>
+          <p class="value-card__desc">Chaque milliseconde compte en e-commerce. J'optimise les images, le CSS critique, et je surveille les Core Web Vitals à chaque livraison.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-card__num">03</div>
+          <h3 class="value-card__title">Collaboration agile</h3>
+          <p class="value-card__desc">Je travaille en équipe pluridisciplinaire et m'adapte aux contraintes design et marketing. La communication claire et les specs précises me semblent non-négociables.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLS -->
+    <section class="section container" aria-labelledby="tools-title">
+      <div class="label reveal">Mon environnement</div>
+      <h2 id="tools-title" style="font-size:clamp(2rem,3.5vw,3rem); margin-top:0.75rem; letter-spacing:-0.03em;" class="reveal">
+        Outils & technologies.
+      </h2>
+
+      <div class="tools-grid">
+        <div class="tool-item reveal"><div class="tool-item__icon">🛍️</div><div class="tool-item__name">Shopify / Plus</div></div>
+        <div class="tool-item reveal"><div class="tool-item__icon">💧</div><div class="tool-item__name">Liquid</div></div>
+        <div class="tool-item reveal"><div class="tool-item__icon">🎨</div><div class="tool-item__name">HTML5 / CSS3</div></div>
+        <div class="tool-item reveal"><div class="tool-item__icon">⚡</div><div class="tool-item__name">JavaScript</div></div>
+        <div class="tool-item reveal"><div class="tool-item__icon">📐</div><div class="tool-item__name">Figma</div></div>
+        <div class="tool-item reveal"><div class="tool-item__icon">🔀</div><div class="tool-item__name">Git / GitHub</div></div>
+        <div class="tool-item reveal"><div class="tool-item__icon">📧</div><div class="tool-item__name">Klaviyo</div></div>
+        <div class="tool-item reveal"><div class="tool-item__icon">🔁</div><div class="tool-item__name">Recharge</div></div>
+        <div class="tool-item reveal"><div class="tool-item__icon">⭐</div><div class="tool-item__name">Yotpo</div></div>
+        <div class="tool-item reveal"><div class="tool-item__icon">🔍</div><div class="tool-item__name">Algolia</div></div>
+        <div class="tool-item reveal"><div class="tool-item__icon">📊</div><div class="tool-item__name">GA4 / GTM</div></div>
+        <div class="tool-item reveal"><div class="tool-item__icon">🚀</div><div class="tool-item__name">Shopify CLI</div></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band" aria-label="Appel à l'action">
+      <div class="cta-band__inner container">
+        <h2 class="cta-band__heading">
+          Envie de travailler<br><em>ensemble ?</em>
+        </h2>
+        <a href="contact.html" class="btn btn--dark">Prendre contact →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer__inner container">
+      <span class="footer__logo">AC<span>.</span></span>
+      <span class="footer__copy">© 2025 Alex Chen — Développeur Shopify</span>
+      <nav class="footer__links" aria-label="Liens footer">
+        <a href="projects.html">Projets</a>
+        <a href="about.html">À propos</a>
+        <a href="contact.html">Contact</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="GitHub">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
